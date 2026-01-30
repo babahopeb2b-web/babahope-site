@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Babahope | Product Landing</title>
+
+<style>
+:root{
+ --accent:#ff7a18;
+ --accent2:#7c3aed;
+ --text:#0f172a;
+ --muted:#475569;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:#fff;color:var(--text)}
+.container{max-width:900px;margin:auto;padding:20px}
+header{text-align:center}
+h1{margin:10px 0}
+.price{font-size:1.8rem;color:#ea580c;font-weight:700}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.badge{background:#f1f5f9;padding:6px 12px;border-radius:999px;font-size:.85rem}
+.urgent{background:#fee2e2;color:#b91c1c;font-weight:600}
+
+.slider{overflow:hidden;border-radius:16px;margin:20px 0}
+.slides{display:flex;transition:transform .4s ease}
+.slides img{width:100%;flex-shrink:0;display:block}
+
+.features{padding-left:18px}
+.features li{margin:8px 0;color:var(--muted)}
+
+.cta{display:block;margin:24px auto;padding:16px 34px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;font-weight:600;width:max-content}
+
+.sticky{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -8px 20px rgba(0,0,0,.15);padding:12px;display:flex;justify-content:space-between;align-items:center;z-index:999}
+.sticky a{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>CMF Buds Pro 2</h1>
+<div class="price">₹205</div>
+<div class="badges">
+ <div class="badge">OG Quality</div>
+ <div class="badge">In Stock</div>
+ <div class="badge urgent">Limited Stock</div>
+</div>
+</header>
+
+<div class="slider">
+ <div class="slides" id="slides1">
+  <img src="cmf-buds-2-1.jpg.jpeg">
+  <img src="cmf-buds-2-2.jpg.jpeg">
+  <img src="cmf-buds-2-3.jpg.jpg">
+  <img src="cmf-buds-2-4.jpg.png">
+ </div>
+</div>
+
+<ul class="features">
+ <li>Original grade quality</li>
+ <li>Clear audio & solid bass</li>
+ <li>Fast moving product</li>
+</ul>
+
+<a class="cta" href="https://wa.me/918700120400">Order on WhatsApp</a>
+</div>
+
+<hr>
+
+<div class="container">
+<header>
+<h1>OnePlus Pro 3</h1>
+<div class="price">₹210</div>
+<div class="badges">
+ <div class="badge">Best Quality</div>
+ <div class="badge">Premium Look</div>
+ <div class="badge urgent">Best Selling</div>
+</div>
+</header>
+
+<div class="slider">
+ <div class="slides" id="slides2">
+  <img src="oneplus-pro-3-1.jpg.jpg">
+  <img src="oneplus-pro-3-2.jpg.jpg">
+  <img src="oneplus-pro-3-3.jpg.jpg">
+  <img src="oneplus-pro-3-4.jpg.jpg">
+  <img src="oneplus-pro-3-5.jpg.jpg">
+ </div>
+</div>
+
+<ul class="features">
+ <li>Best quality earbuds</li>
+ <li>Premium look & feel</li>
+ <li>Our best selling product</li>
+ <li>New refreshing design</li>
+</ul>
+
+<a class="cta" href="https://wa.me/918700120400">Order on WhatsApp</a>
+</div>
+
+<div class="sticky">
+<span>CMF Buds Pro 2 – ₹205</span>
+<a href="https://wa.me/918700120400">Order on WhatsApp</a>
+</div>
+
+<script>
+function initSlider(id){
+ let index=0;
+ const slides=document.getElementById(id);
+ const total=slides.children.length;
+ setInterval(()=>{
+  index=(index+1)%total;
+  slides.style.transform=`translateX(-${index*100}%)`;
+ },3000);
+}
+initSlider('slides1');
+initSlider('slides2');
+</script>
+
+</body>
+</html>
